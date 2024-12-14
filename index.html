@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  @media screen and (max-width: 768px) {
+    #wrap2 {
+      margin-left: 10px;
+      width: auto;
+      padding: 8px;
+    }
+
+    #wrap3 {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    button {
+      margin-left: 20px;
+      font-size: 36px;
+    }
+
+    #infoo, #tambahan {
+      width: auto;
+      margin-top: 10px;
+    }
+
+    #ket {
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    h4 {
+      font-size: 14px;
+    }
+
+    #btnReset {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+
+    #wrap {
+      padding: 8px;
+    }
+
+    #wrap2 {
+      font-size: 14px;
+      padding: 6px;
+    }
+
+    button {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+
+    #infoo {
+      width: 100px;
+      margin-top: 70px;
+    }
+
+    #tambahan {
+      width: 100px;
+      margin-top: 0;
+    }
+
+    #ket {
+      font-size: 12px;
+    }
+
+    #wrap3 input {
+      font-size: 14px;
+    }
+
+    h4 {
+      font-size: 12px;
+    }
+  }
+    body{
+  background-color:gray;
+}
+#wrap{
+  background-color:yellow;
+  padding:12px;
+  padding-bottom:0px;
+  border:2px solid tomato;
+}
+#wrap2{
+  background-color:#222;
+  color:yellow;
+  margin-left:130px;
+  padding:12px;
+  font-family:monospace;
+  font-variant:small-caps;
+  width:160px;
+  border:3px solid tomato;
+}
+#nilai{
+  background-color:lime;
+  color:black;
+}
+#cetTime{
+  background-color:aqua;
+  color:black;
+}
+#soal{
+  height:25px;
+  background-color:black;
+  color:white;
+  padding:5px;
+  border:3px solid tomato;
+  text-align:center;
+  border-radius:21px;
+}
+#wrap3{
+  background-color:aqua;
+  padding:3px;
+  width:80%;
+  border:4px solid black;
+  text-align:center;
+  margin-left:25px;
+  margin-top:-15px;
+  border-radius:0 60px 0 60px;
+}
+button{
+  margin-top:-40px;
+  margin-left:190px;
+  font-size:45px;
+  border:3px solid black;
+  background-color:bisque;
+  border-radius:50px;
+  transform: rotate(-25deg);
+  box-shadow:5px 5px 5px red;
+}
+button:hover{
+  margin-top:-40px;
+  margin-left:190px;
+  font-size:45px;
+  border:3px solid black;
+  background-color:yellow;
+  border-radius:50px;
+  transform: rotate(-25deg);
+  box-shadow:5px 5px 15px blue;
+}
+#infoo{
+  position:absolute;
+  width:120px;
+  height:60px;
+  margin-top:83px;
+  margin-left:14px;
+  text-align: center;
+  font-family: Monospace;
+  background-color: #222;
+  color:white;
+  border:2px solid tomato;
+  
+}
+#tambahan{
+  position:absolute;
+  width:120px;
+  height:60px;
+  margin-top:15px;
+  margin-left:14px;
+  text-align: center;
+  font-family: Monospace;
+  background-color: #fff;
+  color:black;
+  border:3px solid black;
+  border-radius:20px 0 20px 0;
+  box-shadow: inset 5px 5px 11px blue,inset -5px -5px 11px blue;
+}
+#ket{
+  background-color: #222;
+  color:white;
+  border:2px solid tomato;
+  padding: 7px;
+  font-family: Monospace;
+  text-align: center;
+}
+#myInfo{
+  font-family: Monospace;
+  text-align: center;
+  margin-top:20px;
+}
+h4{
+  background-color: #eee;
+  color:black;
+  border: 3px solid tomato;
+}
+  </style>
+</head>
+<body>
+  <h3 id='ket'>Silahkan sambung ayat Al-Quran di bawah dengan benar</h3>
+  <div id='infoo'>
+    <h3 id='surat'>DAFTAR <br>Surat</h3>
+  </div>
+  <div id='tambahan'>
+    <h3 id='tamb'></h3>
+  </div>
+  <div id="wrap">
+    <div id='wrap2'>
+      <h3 id='cetTime'>Time :</h3>
+      <h2 id='nilai'>Nilai : </h2>
+    </div>
+    <h4 id='soal'></h4>
+  <div id='wrap3'>
+    <input name='sama' type='radio' id='j0'/>
+    <label id='jwbn1'></label><br>
+    <input name='sama' type='radio' id='j1'/>
+    <label id='jwbn2'></label><br>
+    <input name='sama' type='radio' id='j2'/>
+    <label id='jwbn3'></label><br>
+    <input name='sama' type='radio' id='j3'/>
+    <label id='jwbn4'></label><br><br><br>
+  </div>
+   <button id='btn' onclick='myBtn()'>KIRIM</button>
+  </div>
+  <button id='btnReset'>Main Lagi</button>
+  <div id='myInfo'>
+    <h4>Silahkan kirim pesan ke <span
+    style='border:1px solid black;color:red;background-color:yellow'>luckywahyu050@gmail.com</span> jika kalian menemukan
+    kesalahan penulisan ayat Al-Quran</h4>
+    <h4> Kumpulan Soal Agama yang dibuat oleh Lucky_wahyu <br><br>1. <a href="https://forms.gle/oWyStaC2o9mXygjQA">Soal Agama tentang Tajwid</a> <br><br>2. <a href="https://forms.gle/pMPa5NwW4WYdkm7r6">Soal Agama tentang Tajwid dan wawasan islami</a> <br><br>3. <a href="https://forms.gle/SwyVRRmqGgifA2Tp6">Soal Agama tentang Sejarah Nabi Musa a.s</a><br><br>4. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbHyq3-wvaLyB_JvZfiYkcpdn_FKY8YyL0kSAqYvzdOhJ2XQ/viewform?usp=sf_link">Soal Agama tentang wawasan islami</a></h4>
+    <h4>Kumpulan Soal Inggris yang dibuat oleh Lucky_wahyu <br><br>1. <a href="https://forms.gle/HSp7GJQNYX8BUt2t5">Soal Inggris tentang My your that this</a> <br><br>2. <a href="https://forms.gle/vd6UoYqAqkru3orb8">Soal Inggris mengartikan sesuatu</a> <br><br>3. <a href="https://forms.gle/GCBYWs1aUGiF1T8A7">Soal Inggris tentang Subject and object</a><br><br>4. <a href="https://forms.gle/HZPaxPC9aZFaRoiF7">Soal Inggris mengartikan versi 2</a> <br><br>5. <a href="https://forms.gle/TSv2QXBLMhabU5wJ6">Soal Inggris tentang kata sifat</a> <br><br>6. <a href="https://forms.gle/hyWtPnWyDKHryZur8">Soal Inggris mengartikan v3</a> <br></h4>
+  </div>
+  <script>
+    btnReset.style.display='none'
+    myInfo.style.display='none'
+    let nama;
+    if(true)
+       nama=prompt("Silahkan Masukan Nama Kamu")
+    let mySoal=[
+       {question:'لَقَدْ خَلَقْنَا الْاِ نْسَا نَ فِيْۤ اَحْسَنِ تَقْوِيْمٍ ',
+         jawaban:[
+           'فَمَا يُكَذِّبُكَ بَعْدُ بِا لدِّيْنِ'
+           ,'ثُمَّ رَدَدْنٰهُ اَسْفَلَ سَا فِلِيْنَ '
+           ,'وَهٰذَا الْبَلَدِ الْاَ مِيْنِ '
+           ,'اَلَيْسَ اللّٰهُ بِاَ حْكَمِ الْحٰكِمِيْنَ'
+           ]
+       },
+       {question:'فَا لْمُغِيْرٰتِ صُبْحًا ',
+         jawaban:[
+           'وَا لْعٰدِيٰتِ ضَبْحًا '
+           ,'فَوَسَطْنَ بِهٖ جَمْعًا '
+           ,'وَاِ نَّهٗ عَلٰى ذٰلِكَ لَشَهِيْدٌ '
+           ,'فَاَ ثَرْنَ بِهٖ نَقْعًا '
+           ]
+       },
+       {question:'اَنْ رَّاٰهُ اسْتَغْنٰى ',
+         jawaban:[
+           'اَرَءَيْتَ الَّذِيْ يَنْهٰى '
+           ,'الَّذِيْ عَلَّمَ بِا لْقَلَمِ '
+           ,'اِنَّ اِلٰى رَبِّكَ الرُّجْعٰى '
+           ,'عَلَّمَ الْاِ نْسَا نَ مَا لَمْ يَعْلَمْ '
+           ]
+       },
+       {question:'وَاَ خْرَجَتِ الْاَ رْضُ اَثْقَا لَهَا ',
+        jawaban:[
+           'وَقَا لَ الْاِ نْسَا نُ مَا لَهَا '
+           ,'يَوْمَئِذٍ تُحَدِّثُ اَخْبَا رَهَا '
+           ,'فَمَنْ يَّعْمَلْ مِثْقَا لَ ذَرَّةٍ خَيْرًا يَّرَهٗ '
+           ,'بِاَ نَّ رَبَّكَ اَوْحٰى لَهَا '
+          ]
+       },
+       {question:'فَاِ ذَا فَرَغْتَ فَا نْصَبْ ',
+        jawaban:[
+           'وَوَضَعْنَا عَنْكَ وِزْرَكَ '
+           ,'وَرَفَعْنَا لَـكَ ذِكْرَكَ '
+           ,'اِنَّ مَعَ الْعُسْرِ يُسْرًا '
+           ,'وَاِ لٰى رَبِّكَ فَا رْغَبْ'
+          ]
+       },
+       {question:'وَا لَّيْلِ اِذَا سَجٰى ',
+        jawaban:[
+           'وَا لضُّحٰى '
+           ,'مَا وَدَّعَكَ رَبُّكَ وَمَا قَلٰى '
+           ,'وَلَسَوْفَ يُعْطِيْكَ رَبُّكَ فَتَرْضٰى '
+           ,'وَلَـلْاٰ خِرَةُ خَيْرٌ لَّكَ مِنَ الْاُ وْلٰى '
+          ]
+       },
+       {question:'خَلَقَ الْاِ نْسَا نَ مِنْ عَلَقٍ ',
+        jawaban:[
+           'اِقْرَأْ بِا سْمِ رَبِّكَ الَّذِيْ خَلَقَ '
+           ,'الَّذِيْ عَلَّمَ بِا لْقَلَمِ '
+           ,'اِقْرَأْ وَرَبُّكَ الْاَ كْرَمُ '
+           ,'عَبْدًا اِذَا صَلّٰى '
+          ]
+       },
+       {question:'رَسُوْلٌ مِّنَ اللّٰهِ يَتْلُوْا صُحُفًا مُّطَهَّرَةً ',
+        jawaban:[
+           'فِيْهَا كُتُبٌ قَيِّمَةٌ '
+           ,'لَمْ يَكُنِ الَّذِيْنَ كَفَرُوْا'
+           ,'وَذٰلِكَ دِيْنُ الْقَيِّمَةِ '
+           ,' رَضِيَ اللّٰهُ عَنْهُمْ وَرَضُوْا عَنْهُ '
+          ]
+       },
+       {question:'اَلْقَا رِعَةُ ',
+        jawaban:[
+           'وَمَاۤ اَدْرٰٮكَ مَا الْقَا رِعَةُ '
+           ,'وَتَكُوْنُ الْجِبَا لُ كَا لْعِهْنِ الْمَنْفُوْشِ '
+           ,'فَهُوَ فِيْ عِيْشَةٍ رَّا ضِيَةٍ '
+           ,'مَا الْقَا رِعَةُ '
+          ]
+       },
+       {question:'اَلْهٰٮكُمُ التَّكَا ثُرُ ',
+        jawaban:[
+           'كَلَّا سَوْفَ تَعْلَمُوْنَ '
+           ,'حَتّٰى زُرْتُمُ الْمَقَا بِرَ '
+           ,'ثُمَّ كَلَّا سَوْفَ تَعْلَمُوْنَ '
+           ,'لَتَرَوُنَّ الْجَحِيْمَ '
+          ]
+       },
+       {question:'thisss',
+        jawaban:[
+           'a'
+           ,'b'
+           ,'c'
+           ,'d'
+          ]
+       },
+      ]
+      let thiss;
+    function randomAngka(){
+      thiss=Math.floor(Math.random()*10)+0
+    }
+    function cetakSoal(){
+      soal.innerHTML=mySoal[thiss]['question']
+      jwbn1.innerHTML=mySoal[thiss]['jawaban'][0]
+      jwbn2.innerHTML=mySoal[thiss]['jawaban'][1]
+      jwbn3.innerHTML=mySoal[thiss]['jawaban'][2]
+      jwbn4.innerHTML=mySoal[thiss]['jawaban'][3]
+      cetakNamaSurat()
+    }
+    let j0=document.getElementById('j0')
+    let j1=document.getElementById('j1')
+    let j2=document.getElementById('j2')
+    let j3=document.getElementById('j3')
+    let jawabanBenar=[j1,j3,j2,j0,j3,j1,j2,j0,j3,j1]
+    let point=0
+    function cekJawaban(){
+      if(jawabanBenar[thiss].checked){
+        point+=10
+        animasi('nilai')
+        tambahann()
+        nilai.innerHTML=`Nilai : ${point}`
+      }
+    }
+    function cetakNamaSurat(){
+      switch(soal.innerHTML){
+        case mySoal[0]['question']:
+          surat.innerHTML='Surat<br> At-tin'
+          break
+        case mySoal[1]['question']:
+          surat.innerHTML='Surat<br> Al-adiyat'
+          break
+        case mySoal[2]['question']:
+          surat.innerHTML='Surat<br> Al-alaq'
+          break
+        case mySoal[3]['question']:
+          surat.innerHTML='Surat<br> Az-zalzalah'
+          break
+        case mySoal[4]['question']:
+          surat.innerHTML='Surat<br> Al-insyirah'
+          break
+        case mySoal[5]['question']:
+          surat.innerHTML='Surat<br> Ad-duha'
+          break
+        case mySoal[6]['question']:
+          surat.innerHTML='Surat<br> Al-alaq'
+          break
+        case mySoal[7]['question']:
+          surat.innerHTML='Surat<br> Al-bayyinah'
+          break
+        case mySoal[8]['question']:
+          surat.innerHTML='Surat<br> Al-qariah'
+          break
+        case mySoal[9]['question']:
+          surat.innerHTML='Surat<br> At-takasur'
+          break
+      }
+    }
+    function resetRadio(){
+      document.querySelector('input[name="sama"]:checked').checked=false
+    }
+    let time;
+    function aturWaktu(s){
+      time=setInterval(()=>{
+        (s>0)?s--:gameOver()
+        if(s<10)
+        cetTime.style='background-color:red;color:white'
+        cetTime.innerHTML=`Time : ${s}`
+      },1000)
+    }aturWaktu(120)
+    function gameOver(){
+      wrap.innerHTML=`Waktu Habis <span style=' border:2px solid black;
+      background-color:yellow'>${nama}</span>!!!<br> dan nilai kamu <span
+      style=' border: 2px solid black; color:white;
+      background-color:#222'>${point}</span>`
+      wrap.style="background-color:#eee;color:black;font-size:35px;text-align:center;font-family:monospace;padding:12px;border:4pxsolid black; margin-top:15px;font-weight:bold"
+      infoo.style.display="none"
+      tambahan.style.display="none"
+      ket.style.display="none"
+      btnReset.style.display=""
+      myInfo.style.display=""
+    }
+     btnReset.onclick=()=>{
+       window.location.reload()
+     }
+    function animasi(target){
+      switch(target){
+        case 'btn&soal':
+          setTimeout(()=>{
+            soal.innerHTML='Loading....'
+            btn.style='background-color:red;color:white'
+          },0)
+          setTimeout(()=>{
+            cetakSoal()
+            btn.style='background-color:yellow;color:black'
+          },350)
+          break
+        case 'nilai':
+          setTimeout(()=>{
+            nilai.innerHTML='🔥🔥'
+          },0)
+          setTimeout(()=>{
+            nilai.innerHTML='🔥🔥🔥🔥'
+          },150)
+          setTimeout(()=>{
+          nilai.innerHTML='🔥🔥🔥🔥🔥🔥'
+          },250)
+          setTimeout(()=>{
+            nilai.innerHTML=`Nilai : ${point}`
+          },340)
+          break
+      }
+    }
+    function tambahann(){
+      switch(point){
+        case 10:
+          tamb.innerHTML='Semangat say!!!!'
+          tambahan.style='background-color:aqua'
+          break
+        case 20:
+          tamb.innerHTML='Semangat<br> 🔥🔥🔥'
+          tambahan.style='background-color:#eee'
+          break
+        case 30:
+          tamb.innerHTML='Jangan lupa sholat'
+          tambahan.style='background-color:#222;color:white'
+          break
+        case 40:
+          tamb.innerHTML='Dont Give Up 🙃 '
+          tambahan.style='background-color:#eee'
+          break
+        case 50:
+          tamb.innerHTML='Hello semangat 🙃 '
+          tambahan.style='background-color:pink'
+          break
+        case 60:
+          tamb.innerHTML='Semangat 45 🕌 '
+          tambahan.style='background-color:#fff'
+          break
+      }
+    }
+    function myBtn(){
+      animasi('btn&soal')
+      cekJawaban()
+      randomAngka()
+      cetakSoal()
+      resetRadio()
+    }
+             randomAngka()
+             cetakSoal()
+  </script>
+</body>
+</html>
